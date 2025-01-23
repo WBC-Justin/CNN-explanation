@@ -1,34 +1,37 @@
-usage: git diff [<options>] [<commit>] [--] [<path>...]
-   or: git diff [<options>] --cached [--merge-base] [<commit>] [--] [<path>...]
-   or: git diff [<options>] [--merge-base] <commit> [<commit>...] <commit> [--] [<path>...]
-   or: git diff [<options>] <commit>...<commit> [--] [<path>...]
-   or: git diff [<options>] <blob> <blob>
-   or: git diff [<options>] --no-index [--] <path> <path>
+#CNN的核心概念
 
-common diff options:
-  -z            output diff-raw with lines terminated with NUL.
-  -p            output patch format.
-  -u            synonym for -p.
-  --patch-with-raw
-                output both a patch and the diff-raw format.
-  --stat        show diffstat instead of patch.
-  --numstat     show numeric diffstat instead of patch.
-  --patch-with-stat
-                output a patch and prepend its diffstat.
-  --name-only   show only names of changed files.
-  --name-status show names and status of changed files.
-  --full-index  show full object name on index lines.
-  --abbrev=<n>  abbreviate object names in diff-tree header and diff-raw.
-  -R            swap input file pairs.
-  -B            detect complete rewrites.
-  -M            detect renames.
-  -C            detect copies.
-  --find-copies-harder
-                try unchanged files as candidate for copy detection.
-  -l<n>         limit rename attempts up to <n> paths.
-  -O<file>      reorder diffs according to the <file>.
-  -S<string>    find filepair whose only one side contains the string.
-  --pickaxe-all
-                show all files diff when -S is used and hit is found.
-  -a  --text    treat all files as text.
+卷積操作：
 
+    卷積是通過濾波器對數據進行滑動窗口操作，計算局部加權和來提取特徵。
+
+    每個濾波器學習特定的模式，例如邊緣、角落或紋理。
+
+    特徵圖（Feature Map）：卷積操作的結果是一個特徵圖，表示數據中某些模式的激活情況。
+
+池化操作：
+
+    最大池化提取每個區域的最大值，保留重要信息。
+
+    平均池化計算區域的平均值，用於平滑特徵。
+
+    參數共享與稀疏連接：卷積層中的濾波器在整個輸入上共享參數，降低模型複雜性。
+
+常見CNN架構
+
+    LeNet-5：最早期的CNN之一，專為手寫數字識別設計。
+
+    AlexNet：在ImageNet比賽中開創性地使用ReLU和Dropout。
+
+    VGG：採用非常深的網路結構，但濾波器大小固定為3x3。
+
+    ResNet：引入殘差塊（Residual Block），解決深層網路的梯度消失問題。
+
+CNN的應用
+
+    圖像分類：識別圖片中的物體類別。
+
+    目標檢測：定位圖片中的目標並分類。
+
+    圖像分割：將圖片分割成不同區域並標註。
+
+    自然語言處理：例如文本分類或情感分析。
